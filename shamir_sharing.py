@@ -28,8 +28,8 @@ def create_shares(s,p,k,n):
     test_shares(s,p,k,n,shares) # see below
     return shares
 
-def recover_secret(shares,p):
-    # Use the list of shares to recover the secret.
+def recover_secret(shares, p):
+    # Use a list of shares to recover the secret.
     # Each share has the form (i,u), where
     # i is the share index and u is in Z_p.
     l = len(shares)

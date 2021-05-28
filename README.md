@@ -48,6 +48,11 @@ primitive_roots.py: Orders and primitive roots. Warning: Code not optimized for 
 
     has_primitive_root(n): Returns True if n has a primitive root
 
+    primitive_root(p): Returns a primitive root of a safe prime p
+    
+    make_base_point(d): Returns a pair (p,r), where p is a safe prime
+                        with d digits and r is a primitive roote of p
+
 
 hashes.py: SHA-256 hashes
 
@@ -103,9 +108,9 @@ shamir_sharing.py: Implemetation of Shamir's Secret Sharing method
                             Returns a list of shares of the form (i,u), where
                             i is the share index in {1,2,...,n} and u is in Z_p. 
     
-    recover_secret(shares,p): Use a list of shares to recover the secret.
-                              Each share has the form (i,u), where
-                              i is the share index and u is in Z_p.
+    recover_secret(shares, p): Use a list of shares to recover the secret.
+                               Each share has the form (i,u), where
+                               i is the share index and u is in Z_p.
 
 
 ecc.py: Tools for elliptic curve computations. Warning: Not optimized for large p
