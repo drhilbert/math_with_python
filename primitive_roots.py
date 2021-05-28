@@ -29,6 +29,8 @@ def order(a,n):
 def is_primitive_root(a,n):
     # Returns True if a is a primitive root (mod n)
     assert(n > 1)
+    if gcd(a,n) != 1:
+        return False
     return (order(a,n) == phi(n))
             
 def make_primitive_root(n):
