@@ -1,4 +1,4 @@
-List of functions by file:
+Python Code for Use in Number Theory and Cryptography
 
 utilities.py: Basic number theory utilities.
 
