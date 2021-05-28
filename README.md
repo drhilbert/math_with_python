@@ -90,8 +90,38 @@ elgamal.py: ElGamal encryption and ElGamal signatures
 
 pohlig-hellman.py: Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms
 
+    dlog(A,r,p): Returns the discrete logarithm of A with base r (mod p)
+
+    primitive_root(p, prime_powers): Finds the smallest primitive root of a prime p,
+                                     given the list of prime powers in p-1
+
 
 shamir_sharing.py: Implemetation of Shamir's Secret Sharing method
 
+    create_shares(s,p,k,n): Split the secret number s into n shares so that
+                            k out of n shares recover the secret.
+                            Returns a list of shares of the form (i,u), where
+                            i is the share index in {1,2,...,n} and u is in Z_p. 
+    
+    recover_secret(shares,p): Use a list of shares to recover the secret.
+                              Each share has the form (i,u), where
+                              i is the share index and u is in Z_p.
 
-ecc.py: Tools for elliptic curve computations
+
+ecc.py: Tools for elliptic curve computations. Warning: Not optimized for large p
+
+    on_curve(P): Returns True if the point P = (x,y) lies on the elliptic curve
+    
+    reflect(P): Returns P' (i.e. the negative of P)
+    
+    add(P,Q): Returns the sum of P and Q
+    
+    mult(P,n): Returns nP
+
+    order(P): Returns the order of a point P
+    
+    points_on_curve(): Returns the list of points on the elliptic curve
+                    
+    group_order(): Returns the order of the elliptic curve
+
+    generators(): Returns the list of generators of the elliptic curve
