@@ -74,18 +74,18 @@ rsa.py: RSA encryption and RSA signatures
 
 elgamal.py: ElGamal encryption and ElGamal signatures
 
-    create_EG_private_key(): Creates an ElGamal private key
+    create_EG_private_key(): Creates an integer ElGamal private key
     
-    EG_public_key(private_key): Returns the public key corresponding to an integer private key
+    EG_public_key(private_key): Returns the public key corresponding to a private key
 
-    EG_encrypt(plaintext, public_key): ElGamal encryption of an integer plaintext with an integer public key
+    EG_encrypt(plaintext, public_key): ElGamal encryption of an integer plaintext with a public key
     
-    EG_decrypt(ciphertext, private_key): ElGamal decryption of ciphertext (A,M) with an integer private key
+    EG_decrypt(ciphertext, private_key): ElGamal decryption of ciphertext (A,M) with a private key
 
-    EG_sign(string, private_key): Signs the SHA-256 hash of a string with an integer private key
+    EG_sign(string, private_key): Signs the SHA-256 hash of a string with a private key
     
     EG_verify(string, signature, public_key): Verifies if the SHA-256 hash of the string was
-                                              correctly signed by the owner of the integer public key
+                                              correctly signed by the owner of the public key
 
 
 pohlig-hellman.py: Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms
