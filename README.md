@@ -12,7 +12,7 @@ utilities.py: Basic number theory utilities
     chinese_remainder(a,m): Solves the system of congruences 
                 x congruent a_i (mod m_i)
                 where a = [ a_0, a_1, a_2, ... ]
-                    and   m = [ m_0, m_1, m_2, ... ] 
+                and   m = [ m_0, m_1, m_2, ... ] 
                     
 
 primes.py: Primality testing and prime generation
