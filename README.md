@@ -1,4 +1,6 @@
 Python Code for Use in Number Theory and Cryptography 
+
+
 utilities.py: Basic number theory utilities
 
     prod(numbers): Returns the product of a list of numbers
