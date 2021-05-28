@@ -55,8 +55,9 @@ def has_primitive_root(n):
         return True
     return False
 
-def primitive_root(p):
+def primitive_root(safe_prime):
     # Returns a primitive root of a safe prime p
+    p = safe_prime
     q = (p-1)//2
     assert(is_prime(p) and is_prime(q)) # making sure p is a safe prime
     while True:

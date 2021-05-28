@@ -48,7 +48,7 @@ primitive_roots.py: Orders and primitive roots. Warning: Code not optimized for 
 
     has_primitive_root(n): Returns True if n has a primitive root
 
-    primitive_root(p): Returns a primitive root of a safe prime p
+    primitive_root(safe_prime): Returns a primitive root of a safe prime p
     
     make_base_point(d): Returns a pair (p,r), where p is a safe prime
                         with d digits and r is a primitive roote of p
