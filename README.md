@@ -1,6 +1,5 @@
-Python Code for Use in Number Theory and Cryptography
-
-utilities.py: Basic number theory utilities.
+Python Code for Use in Number Theory and Cryptography 
+utilities.py: Basic number theory utilities
 
     prod(numbers): Returns the product of a list of numbers
 
@@ -14,7 +13,7 @@ utilities.py: Basic number theory utilities.
                     and   m = [ m_0, m_1, m_2, ... ] 
                     
 
-primes.py: Primality testing and prime generation.
+primes.py: Primality testing and prime generation
 
     is_prime(n): Returns True if n is prime (Miller-Rabin test)
     
@@ -23,7 +22,7 @@ primes.py: Primality testing and prime generation.
     safe_prime(d): Creates a safe prime with d digits
 
 
-factoring.py: Tools for finding the prime factorization.
+factoring.py: Tools for finding the prime factorization
 
     find_factor(n): Uses Pollard's rho method to find a factor of n
 
@@ -35,7 +34,7 @@ factoring.py: Tools for finding the prime factorization.
     print_prime_factorization(n): Prints the prime factorization of n
 
 
-primitive_roots.py: Orders and primitive roots. Warning: Code not optimized for large n.
+primitive_roots.py: Orders and primitive roots. Warning: Code not optimized for large n
 
     phi(n): Euler's totient function
     
@@ -48,14 +47,14 @@ primitive_roots.py: Orders and primitive roots. Warning: Code not optimized for 
     has_primitive_root(n): Returns True if n has a primitive root
 
 
-hashes.py: SHA-256 hashes.
+hashes.py: SHA-256 hashes
 
     sha_256_hex(string): Returns the SHA-256 hash of a string as a hexadecimal string  
 
     sha_256(string): Returns the SHA-256 hash of a string as a base 10 integer
 
 
-rsa.py: RSA encryption and RSA signatures.
+rsa.py: RSA encryption and RSA signatures
 
     create_rsa_private_key(d): Creates a private RSA key (p,q,j) where p and q have d digits
 
@@ -71,7 +70,7 @@ rsa.py: RSA encryption and RSA signatures.
                                                correctly signed by the owner of the public key (n,k)
 
 
-elgamal.py: ElGamal encryption and ElGamal signatures.
+elgamal.py: ElGamal encryption and ElGamal signatures
 
     create_EG_private_key(): Creates an ElGamal private key
     
@@ -87,10 +86,10 @@ elgamal.py: ElGamal encryption and ElGamal signatures.
                                               correctly signed by the owner of the integer public key
 
 
-pohlig-hellman.py: Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms.
+pohlig-hellman.py: Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms
 
 
-shamir_sharing.py: Implemetation of Shamir's Secret Sharing method.
+shamir_sharing.py: Implemetation of Shamir's Secret Sharing method
 
 
-ecc.py: Tools for elliptic curve computations.
+ecc.py: Tools for elliptic curve computations
