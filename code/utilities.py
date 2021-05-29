@@ -2,7 +2,7 @@ def prod(numbers):
     # Returns the product of a list of numbers
     product = 1
     for number in numbers:
-        product = product*number
+        product = product * number
     return product
 
 
@@ -24,7 +24,7 @@ def egcd(a, b):
 def modinv(a, m):
     # Returns the modular inverse of a (mod m) between 0 and m
     (g, x, y) = egcd(a, m) 
-    if g == 1: # Note that 1 = xa+yb in this case
+    if g == 1: # Note that 1 = xa+ym in this case
         return x % m
     else: 
         raise Exception('Modular inverse does not exist')
