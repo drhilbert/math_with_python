@@ -1,7 +1,7 @@
 from utilities import modinv
 
 # Consider a fixed elliptic curve E: y^2 = x^3 + ax + b over the field Z_p.
-# This code is only useful for small values of p.
+# Some of this code is only useful for small values of p.
 
 p = 37
 a = 2
@@ -50,17 +50,23 @@ def mult(P,n):
     # Returns nP
     if P == 'infinity' or n == 0:
         return 'infinity'
-    if n > 0:
-        return add(P, mult(P,n-1)) # NOT efficient!
     if n < 0:
         return mult(reflect(P), -n)
+    # For n > 0, use the double-and-add algorithm:
+    M = 'infinity'
+    while n > 0:
+        if n % 2 == 1:
+            M = add(M,P)
+        n = n // 2
+        P = add(P,P)
+    return M
     
 def order(P):
     # Returns the order of a point P
     n = 1
     Power = P
     while Power != 'infinity':
-        Power = add(Power, P) # NOT efficient
+        Power = add(Power, P)
         n += 1
     return n
 
