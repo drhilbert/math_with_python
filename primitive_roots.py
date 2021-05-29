@@ -1,5 +1,6 @@
 # This code is not efficient for large values of n.
-# But it's easy to find a primitive root of a safe prime p.
+# But it's easy to find a primitive root of a safe prime,
+# using the function primitive_root(safe_prime).
 # To find a primitive root of any large prime p using the prime
 # factorization of p-1, look in the file pohlig-hellman.py.
 
