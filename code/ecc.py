@@ -53,13 +53,11 @@ def mult(P,n):
     if n < 0:
         return mult(reflect(P), -n)
     # For n > 0, use the double-and-add algorithm:
-    M = 'infinity'
-    while n > 0:
-        if n % 2 == 1:
-            M = add(M,P)
-        n = n // 2
-        P = add(P,P)
-    return M
+    S = mult(add(P,P), n//2)
+    if n % 2 == 0:
+        return S
+    else:
+        return add(S,P)
     
 def order(P):
     # Returns the order of a point P
