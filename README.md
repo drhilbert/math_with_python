@@ -1,7 +1,7 @@
 Python Code for Use in Number Theory and Cryptography 
 
 
-[utilities.py](utilities.py): Basic number theory utilities
+[utilities.py](code/utilities.py): Basic number theory utilities
 
     prod(numbers): Returns the product of a list of numbers
 
@@ -15,7 +15,7 @@ Python Code for Use in Number Theory and Cryptography
                 and   m = [ m_0, m_1, m_2, ... ] 
                     
 
-[primes.py](primes.py): Primality testing and prime generation
+[primes.py](code/primes.py): Primality testing and prime generation
 
     is_prime(n): Returns True if n is prime (Miller-Rabin test)
     
@@ -24,7 +24,7 @@ Python Code for Use in Number Theory and Cryptography
     safe_prime(d): Creates a safe prime with d digits
 
 
-[factoring.py](factoring.py): Tools for finding the prime factorization
+[factoring.py](code/factoring.py): Tools for finding the prime factorization
 
     find_factor(n): Uses Pollard's rho method to find a factor of n
 
@@ -36,7 +36,7 @@ Python Code for Use in Number Theory and Cryptography
     print_prime_factorization(n): Prints the prime factorization of n
 
 
-[primitive_roots.py](primitive_roots.py): Orders and primitive roots. Warning: Code not optimized for large n
+[primitive_roots.py](code/primitive_roots.py): Orders and primitive roots. Warning: Code not optimized for large n
 
     phi(n): Euler's totient function
     
@@ -54,14 +54,14 @@ Python Code for Use in Number Theory and Cryptography
                         with d digits and r is a primitive roote of p
 
 
-[hashes.py](hashes.py): SHA-256 hashes
+[hashes.py](code/hashes.py): SHA-256 hashes
 
     sha_256_hex(string): Returns the SHA-256 hash of a string as a hexadecimal string  
 
     sha_256(string): Returns the SHA-256 hash of a string as a base 10 integer
 
 
-[rsa.py](rsa.py): RSA encryption and RSA signatures
+[rsa.py](code/rsa.py): RSA encryption and RSA signatures
 
     create_rsa_private_key(d): Creates a private RSA key (p,q,j) where p and q have d digits
 
@@ -77,7 +77,7 @@ Python Code for Use in Number Theory and Cryptography
                                                correctly signed by the owner of the public key (n,k)
 
 
-[elgamal.py](elgamal.py): ElGamal encryption and ElGamal signatures
+[elgamal.py](code/elgamal.py): ElGamal encryption and ElGamal signatures
 
     create_EG_private_key(): Creates an integer ElGamal private key
     
@@ -93,7 +93,7 @@ Python Code for Use in Number Theory and Cryptography
                                               correctly signed by the owner of the public key
 
 
-[pohlig_hellman.py](pohlig_hellman.py): Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms
+[pohlig_hellman.py](code/pohlig_hellman.py): Implementation of the Pohlig-Hellman algorithm to compute discrete logarithms
 
     dlog(A,r,p): Returns the discrete logarithm of A with base r (mod p)
 
@@ -101,7 +101,7 @@ Python Code for Use in Number Theory and Cryptography
                                      given the list of prime powers in p-1
 
 
-[shamir_sharing.py](shamir_sharing.py): Implemetation of Shamir's Secret Sharing method
+[shamir_sharing.py](code/shamir_sharing.py): Implemetation of Shamir's Secret Sharing method
 
     create_shares(s,p,k,n): Split the secret number s into n shares so that
                             k out of n shares recover the secret.
@@ -113,7 +113,7 @@ Python Code for Use in Number Theory and Cryptography
                                i is the share index and u is in Z_p.
 
 
-[ecc.py](ecc.py): Tools for elliptic curve computations. Warning: Not optimized for large p
+[ecc.py](code/ecc.py): Tools for elliptic curve computations. Warning: Not optimized for large p
 
     on_curve(P): Returns True if the point P = (x,y) lies on the elliptic curve
     
