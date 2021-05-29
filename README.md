@@ -9,6 +9,12 @@ Python Code for Use in Number Theory and Cryptography
 
     modinv(a,m): Returns the modular inverse of a (mod m) between 0 and m
 
+    solve_cong(a,b,m):Returns the smallest nonnegative solution of the congruence
+                      a*x congruent b (mod m)
+    
+    solve_diophantine(a,b,c): Returns a particular solution (x,y) of the diophantine equation
+                              a*x + b*y = c
+    
     chinese_remainder(a,m): Solves the system of congruences 
                 x congruent a_i (mod m_i)
                 where a = [ a_0, a_1, a_2, ... ]
