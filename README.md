@@ -16,9 +16,9 @@ Python Code for Use in Number Theory and Cryptography
                               a*x + b*y = c
     
     chinese_remainder(a,m): Solves the system of congruences 
-                x congruent a_i (mod m_i)
-                where a = [ a_0, a_1, a_2, ... ]
-                and   m = [ m_0, m_1, m_2, ... ] 
+                            x congruent a_i (mod m_i)
+                            where a = [ a_0, a_1, a_2, ... ]
+                            and   m = [ m_0, m_1, m_2, ... ] 
                     
 
 [primes.py](code/primes.py): Primality testing and prime generation
