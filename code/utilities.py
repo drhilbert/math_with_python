@@ -1,3 +1,5 @@
+from math import gcd
+
 def prod(numbers):
     # Returns the product of a list of numbers
     product = 1
@@ -30,6 +32,30 @@ def modinv(a, m):
         raise Exception('Modular inverse does not exist')
     
 
+def solve_cong(a, b, m):
+    # Returns the smallest nonnegative solution of the congruence
+    # a*x congruent b (mod m)
+    d = gcd(a,m)
+    if d == 1:
+        return (modinv(a,m) * b) % m
+    if b % d == 0: # i.e. if d divides b
+        return solve_cong(a//d, b//d, m//d)
+    else:
+        raise Exception('Congruence has no solution')
+    
+
+def solve_diophantine(a, b, c):
+    # Returns a particular solution (x,y) of the diophantine equation
+    # a*x + b*y = c
+    assert not (a == 0 and b == 0) # to avoid trivialities
+    d = gcd(a,b)
+    if c % d == 0: # i.e. if d divdides c
+        (g, x, y) = egcd(a//d, b//d) # Note that g must be 1
+        return ((c*x)//d, (c*y)//d)
+    else:
+        raise Exception('Diophantine equation has no solution')
+    
+        
 def chinese_remainder(a, m):
     #
     # Solves the system of congruences
