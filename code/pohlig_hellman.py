@@ -61,7 +61,7 @@ def dlog_2(A, r, p, prime_power):
 
 def primitive_root(p, prime_powers):
     # Finds the smallest primitive root of a prime p,
-    # given the list of prime powers (p_i,k_i) in p-1.
+    # given the list of prime powers in p-1.
     # See https://cp-algorithms.com/algebra/primitive-root.html
     assert is_prime(p)
     # Checking that the prime factorization works:
