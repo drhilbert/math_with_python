@@ -104,7 +104,7 @@ Python Code for Use in Number Theory and Cryptography
     dlog(A,r,p): Returns the discrete logarithm of A with base r (mod p)
 
     primitive_root(p, prime_powers): Finds the smallest primitive root of a prime p,
-                                     given the list of prime powers (p_i,k_i) in p-1.
+                                     given the list of prime powers in p-1.
 
 
 [shamir_sharing.py](code/shamir_sharing.py): Implemetation of Shamir's Secret Sharing method
