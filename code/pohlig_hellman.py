@@ -12,7 +12,7 @@ def dlog_by_trial_mult(A, r, p):
     # We return 0 if A = 1, so dlog_by_trial_mult(1,r,p) = 1
     A = A % p
     r = r % p
-    assert ( A != 0 )
+    assert A != 0
     if A == 1:
         return 0
     power = 1 
@@ -27,7 +27,7 @@ def dlog(A, r, p):
     # We return 0 if A = 1, so dlog(1,r,p) = 1
     A = A % p
     r = r % p
-    assert ( A != 0 )
+    assert A != 0
     if A == 1:
         return 0
     # Reduction 1 of Pohlig_Hellman:
@@ -60,11 +60,12 @@ def dlog_2(A, r, p, prime_power):
     return x
 
 def primitive_root(p, prime_powers):
-    # Finds the smallest primitive root of a prime p, given the prime powers in p-1
+    # Finds the smallest primitive root of a prime p,
+    # given the list of prime powers (p_i,k_i) in p-1.
     # See https://cp-algorithms.com/algebra/primitive-root.html
-    # First we check that p is prime and that the prime factorization works:
-    assert( is_prime(p) ) 
-    assert( prod([p_i**k_i for (p_i,k_i) in prime_powers]) == p-1 )
+    assert is_prime(p)
+    # Checking that the prime factorization works:
+    assert prod([p_i**k_i for (p_i,k_i) in prime_powers]) == p-1 
     for a in range(1,p):
         powers = [ pow(a, (p-1)//p_i, p) for (p_i,k_i) in prime_powers ]
         if 1 in powers:
@@ -101,7 +102,7 @@ start = perf_counter()
 k = dlog(A,r,p) # Replace dlog with dlog_by_trial_mult for comparison
 end = perf_counter()
 dlog_time = end-start # This indcludes the time to factor p-1
-assert( pow(r,k,p) == A ) # Just checking that dlog works as is should
+assert pow(r,k,p) == A # Just checking that dlog works as is should
 
 print(f"Factoring time:      {factoring_time} seconds")
 print(f"Pohlig-Hellman time: {dlog_time} seconds")
