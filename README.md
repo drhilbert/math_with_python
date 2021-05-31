@@ -1,4 +1,4 @@
-Python Code for Use in Number Theory and Cryptography
+### Python Code for Use in Number Theory and Cryptography
 
 
 [utilities.py](code/utilities.py): Basic number theory utilities
