@@ -1,7 +1,6 @@
 import random
-# The following creates a cryptographically secure version of randint:
-system_random = random.SystemRandom()
-randint = system_random.randint
+# The following creates a cryptographically secure instance of randint:
+randint = random.SystemRandom().randint
 
 def is_prime(n):
     # Returns True if n is prime (Miller-Rabin test)
@@ -46,4 +45,5 @@ def safe_prime(d): # Creates a safe prime with d digits
         p = make_prime(d)
         if is_prime((p-1)//2):
             return p
+        
         

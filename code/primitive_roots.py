@@ -5,9 +5,8 @@
 # factorization of p-1, look in the file pohlig-hellman.py.
 
 import random
-# The following creates a cryptographically secure version of randint:
-system_random = random.SystemRandom()
-randint = system_random.randint
+# The following creates a cryptographically secure instance of randint:
+randint = random.SystemRandom().randint
 
 from math import gcd
 from primes import is_prime, make_prime, safe_prime
