@@ -1,6 +1,9 @@
 ### Python Code for Use in Number Theory and Cryptography
 
 
+You can run Python code in your browser, e.g. here: [www.programiz.com/python-programming/online-compiler](https://www.programiz.com/python-programming/online-compiler/)
+
+
 [utilities.py](code/utilities.py): Basic number theory utilities
 
     prod(numbers): Returns the product of a list of numbers
