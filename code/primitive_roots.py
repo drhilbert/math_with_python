@@ -5,7 +5,7 @@
 # factorization of p-1, look in the file pohlig-hellman.py.
 
 import random
-# The following creates a cryptographically secure instance of randint:
+# For cryptographically secure random number generation:
 randint = random.SystemRandom().randint
 
 from math import gcd

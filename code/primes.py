@@ -1,5 +1,5 @@
 import random
-# The following creates a cryptographically secure instance of randint:
+# For cryptographically secure random number generation:
 randint = random.SystemRandom().randint
 
 def is_prime(n):
