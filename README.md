@@ -49,6 +49,8 @@ You can run this Python code in your browser, e.g. on this site: \
 [primitive_roots.py](code/primitive_roots.py): Orders and primitive roots. Warning: Code not optimized for large n
 
     phi(n): Euler's totient function
+
+    varphi(n): More efficient implementation of Euler's totient function
     
     order(a,n): Returns the order of a (mod n)
 
