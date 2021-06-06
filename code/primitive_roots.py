@@ -9,7 +9,9 @@ import random
 randint = random.SystemRandom().randint
 
 from math import gcd
+from utilities import prod
 from primes import is_prime, make_prime, safe_prime
+from factoring import list_of_prime_powers
 
 def phi(n):
     # Euler's totient function
@@ -19,6 +21,13 @@ def phi(n):
         if gcd(k,n) == 1:
             counter += 1
     return counter
+
+def varphi(n):
+    # More efficient implementation of Euler's totient function
+    assert(n > 0)
+    prime_powers = list_of_prime_powers(n)
+    factors = [ (p-1)*pow(p,k-1) for (p,k) in prime_powers ]
+    return prod(factors)
 
 def order(a,n):
     # Returns the order of a (mod n)
@@ -38,7 +47,7 @@ def is_primitive_root(a,n):
     assert(n > 1)
     if gcd(a,n) != 1:
         return False
-    return (order(a,n) == phi(n))
+    return (order(a,n) == varphi(n))
             
 def make_primitive_root(n):
     # Returns the smallest primitive root of n, or None
