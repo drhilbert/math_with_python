@@ -1,5 +1,6 @@
 ### Python Code for Use in Number Theory and Cryptography
 
+Don't know how to run Python code? Click [here](wiki/How-To-Run-Python-Code).
 
 [utilities.py](code/utilities.py): Basic number theory utilities
 
