@@ -29,7 +29,7 @@ def modinv(a, m):
     if g == 1: # Note that 1 = xa+ym in this case
         return x % m
     else: 
-        raise Exception('Modular inverse does not exist')
+        return None
     
 
 def solve_cong(a, b, m):
