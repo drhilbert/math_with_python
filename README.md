@@ -110,6 +110,13 @@ Don't know how to run Python code? Click [here](https://github.com/drhilbert/mat
                                      given the list of prime powers in p-1.
 
 
+[babystep_giantstep.py](code/babystep_giantstep.py): Implementation of Shanks' Babystep-Giantstep algorithm to compute discrete logarithms
+
+    dlog_by_shanks(A, r, p, N = None): Returns the discrete logarithm of A with base r (mod p)
+                                       N is the order of r (mod p)
+                                       The last argument is optional: We use N = p-1 if left out
+
+
 [shamir_sharing.py](code/shamir_sharing.py): Implemetation of Shamir's Secret Sharing method
 
     create_shares(s,p,k,n): Split the secret number s into n shares so that
